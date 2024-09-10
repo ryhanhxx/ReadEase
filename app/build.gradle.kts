@@ -74,4 +74,6 @@ dependencies {
     //coil
     implementation("io.coil-kt:coil:2.4.0")
 
+    //rv
+    implementation("androidx.recyclerview:recyclerview:1.3.1")
 }

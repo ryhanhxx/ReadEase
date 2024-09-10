@@ -7,4 +7,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="txt_lewati">Lewati</string>
     <string name="txt_selanjutnya">Selanjutnya</string>
+    <string name="title_news">News</string>
+    <string name="title_profile">Profile</string>
 </resources>

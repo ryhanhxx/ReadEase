@@ -10,19 +10,27 @@ import androidx.lifecycle.ViewModelProvider
 import com.ch.readease.databinding.FragmentHomeBinding
 import com.ch.readease.dummy.DummyAuthorDataSource
 import com.ch.readease.dummy.DummyAuthorDataSourceImpl
+import com.ch.readease.dummy.DummyNewsDataSourceImpl
 import com.ch.readease.model.Author
+import com.ch.readease.model.News
 import com.ch.readease.presentation.home.adapter.AuthorAdapter
+import com.ch.readease.presentation.home.adapter.NewsAdapter
 
 class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
 
-    private val authorAdapter: AuthorAdapter by lazy {
+    private val adapterAuthor: AuthorAdapter by lazy {
         AuthorAdapter { author: Author ->
 
         }
     }
 
+    private val adapterNews: NewsAdapter by lazy {
+        NewsAdapter { news: News ->
+
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -30,22 +38,21 @@ class HomeFragment : Fragment() {
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
+    }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         setupAuthor()
-        setupNews1()
-        setupNews2()
+        setupNews()
     }
 
-    private fun setupNews2() {
-
-    }
-
-    private fun setupNews1() {
-
+    private fun setupNews() {
+        binding.rvNews1.adapter = adapterNews
+        adapterNews.setItems(DummyNewsDataSourceImpl().getNewsData())
     }
 
     private fun setupAuthor() {
-        binding.rvNews.adapter = authorAdapter
-        authorAdapter.setItems(DummyAuthorDataSourceImpl().getAuthorData())
+        binding.rvAuthor.adapter = adapterAuthor
+        adapterAuthor.setItems(DummyAuthorDataSourceImpl().getAuthorData())
     }
 }

@@ -11,31 +11,39 @@ class DummyNewsDataSourceImpl() : DummyNewsDataSource {
         return mutableListOf(
             News(
                 title = "Judul Artikel 1",
-                content = "Isi artikel 1",
+                desc = "Isi artikel 1",
                 author = "Author 1",
-                date = "2023-09-20",
-                imageUrl = "https://example.com/image2.jpg"
+                imgUrl = "https://example.com/image2.jpg"
             ),
             News(
                 title = "Judul Artikel 2",
-                content = "Isi artikel 2",
+                desc = "Isi artikel 2",
                 author = "Author 2",
-                date = "2023-09-20",
-                imageUrl = "https://example.com/image2.jpg"
+                imgUrl = "https://example.com/image2.jpg"
             ),
             News(
                 title = "Judul Artikel 3",
-                content = "Isi artikel 3",
+                desc = "Isi artikel 3",
                 author = "Author 3",
-                date = "2023-09-20",
-                imageUrl = "https://example.com/image2.jpg"
+                imgUrl = "https://example.com/image2.jpg"
             ),
             News(
                 title = "Judul Artikel 4",
-                content = "Isi artikel 4",
+                desc = "Isi artikel 4",
                 author = "Author 4",
-                date = "2023-09-20",
-                imageUrl = "https://example.com/image2.jpg"
+                imgUrl = "https://example.com/image2.jpg"
+            ),
+            News(
+                title = "Judul Artikel 5",
+                desc = "Isi artikel 5",
+                author = "Author 5",
+                imgUrl = "https://example.com/image2.jpg"
+            ),
+            News(
+                title = "Judul Artikel 6",
+                desc = "Isi artikel 6",
+                author = "Author 6",
+                imgUrl = "https://example.com/image2.jpg"
             ),
         )
     }

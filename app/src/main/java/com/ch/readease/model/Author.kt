@@ -8,5 +8,5 @@ import java.util.UUID
 data class Author(
     val id: String = UUID.randomUUID().toString(),
     val name: String,
-    val imageUrl: String,
+    val imgUrl: String,
 ) : Parcelable

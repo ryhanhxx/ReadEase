@@ -12,19 +12,23 @@ class DummyAuthorDataSourceImpl() : DummyAuthorDataSource {
         return mutableListOf(
             Author(
                 name = "Author 1",
-                imageUrl = R.drawable.img_author_1.toString()
+                imgUrl = "https://raw.githubusercontent.com/ryhanhxx/ReadEase/master/app/src/main/res/drawable/img_author_1.png"
             ),
             Author(
                 name = "Author 2",
-                imageUrl = R.drawable.img_author_2.toString()
+                imgUrl = "https://raw.githubusercontent.com/ryhanhxx/ReadEase/master/app/src/main/res/drawable/img_author_2.png"
             ),
             Author(
                 name = "Author 3",
-                imageUrl = R.drawable.img_author_3.toString()
+                imgUrl = "https://raw.githubusercontent.com/ryhanhxx/ReadEase/master/app/src/main/res/drawable/img_author_3.png"
             ),
             Author(
                 name = "Author 4",
-                imageUrl = R.drawable.img_author_4.toString()
+                imgUrl = "https://raw.githubusercontent.com/ryhanhxx/ReadEase/master/app/src/main/res/drawable/img_author_4.png"
+            ),
+            Author(
+                name = "Author 5",
+                imgUrl = "https://raw.githubusercontent.com/ryhanhxx/ReadEase/master/app/src/main/res/drawable/img_author_4.png"
             ),
         )
     }

@@ -42,7 +42,7 @@ class AuthorAdapter(private val onItemClick: (Author) -> Unit) :
         private val onItemClick: (Author) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Author) {
-            binding.ivImg.load(item.imageUrl)
+            binding.ivImg.load(item.imgUrl)
             binding.tvName.text = item.name
             binding.root.setOnClickListener {
                 onItemClick.invoke(item)
