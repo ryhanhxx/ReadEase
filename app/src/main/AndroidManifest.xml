@@ -15,6 +15,9 @@
         android:theme="@style/Theme.ReadEase"
         tools:targetApi="31">
         <activity
+            android:name=".presentation.news.NewsActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.register.RegisterActivity"
             android:exported="false" />
         <activity
@@ -22,13 +25,14 @@
             android:exported="false" />
         <activity
             android:name=".presentation.onboarding.OnboardingActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".presentation.main.MainActivity"
             android:exported="true"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

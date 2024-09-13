@@ -18,47 +18,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/cl_header"
+            <SearchView
+                android:id="@+id/sv_news"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toTopOf="parent">
+                android:background="@drawable/bg_sv"
+                android:iconifiedByDefault="false"
+                android:queryHint="Find news"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/iv_notification"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <ImageView
-                        android:layout_width="52dp"
-                        android:layout_height="52dp"
-                        android:src="@drawable/img_profile" />
-
-                    <TextView
-                        style="@style/TextAppearance.Material3.TitleMedium"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginHorizontal="8dp"
-                        android:fontFamily="@font/roboto_bold"
-                        android:text="Hello, ray"
-                        android:textColor="@color/cPrimary"
-                        android:textSize="16sp" />
-                </androidx.appcompat.widget.LinearLayoutCompat>
-
-                <ImageView
-                    android:id="@+id/iv_notification"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/img_bell"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/ll_categories"
@@ -66,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="12dp"
                 android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@id/cl_header">
+                app:layout_constraintTop_toBottomOf="@id/sv_news">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -192,7 +160,7 @@
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                     app:spanCount="2"
                     tools:itemCount="6"
-                    tools:listitem="@layout/item_news" />
+                    tools:listitem="@layout/item_news_grid" />
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

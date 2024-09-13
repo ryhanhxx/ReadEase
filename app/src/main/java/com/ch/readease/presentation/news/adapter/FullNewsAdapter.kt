@@ -1,14 +1,14 @@
-package com.ch.readease.presentation.home.adapter
+package com.ch.readease.presentation.news.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.ch.readease.databinding.ItemNewsGridBinding
+import com.ch.readease.databinding.ItemNewsListBinding
 import com.ch.readease.model.News
 
-class NewsAdapter(private val onItemClick: (News) -> Unit) :
-    RecyclerView.Adapter<NewsAdapter.NewsItemListViewHolder>() {
+class FullNewsAdapter(private val onItemClick: (News) -> Unit) :
+    RecyclerView.Adapter<FullNewsAdapter.FullNewsListViewHolder>() {
 
     private var items: MutableList<News> = mutableListOf()
 
@@ -21,24 +21,24 @@ class NewsAdapter(private val onItemClick: (News) -> Unit) :
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): NewsItemListViewHolder {
+    ): FullNewsListViewHolder {
         val binding =
-            ItemNewsGridBinding.inflate(
+            ItemNewsListBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
                 false
             )
-        return NewsItemListViewHolder(binding, onItemClick)
+        return FullNewsListViewHolder(binding, onItemClick)
     }
 
-    override fun onBindViewHolder(holder: NewsItemListViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: FullNewsListViewHolder, position: Int) {
         holder.bind(items[position])
     }
 
     override fun getItemCount(): Int = items.size
 
-    class NewsItemListViewHolder(
-        private val binding: ItemNewsGridBinding,
+    class FullNewsListViewHolder(
+        private val binding: ItemNewsListBinding,
         private val onItemClick: (News) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: News) {
