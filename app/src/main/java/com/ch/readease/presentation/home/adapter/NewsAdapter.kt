@@ -45,7 +45,7 @@ class NewsAdapter(private val onItemClick: (News) -> Unit) :
             binding.ivImg.load(item.imgUrl)
             binding.tvTitle.text = item.title
             binding.tvAuthor.text = item.author
-            binding.tvDesc.text = item.desc
+            binding.tvContent.text = item.content
             binding.root.setOnClickListener {
                 onItemClick.invoke(item)
             }

@@ -16,9 +16,14 @@ class NewsFragment : Fragment() {
 
     private val adapterNews: FullNewsAdapter by lazy {
         FullNewsAdapter { news: News ->
-
+            navigateToDetailFragment(news)
         }
     }
+
+    private fun navigateToDetailFragment(news: News) {
+        NewsActivity.startActivity(requireContext(), news)
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater,

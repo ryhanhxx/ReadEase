@@ -1,13 +1,9 @@
 package com.ch.readease.presentation.news
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import android.os.Bundle
 import androidx.lifecycle.ViewModel
+import com.ch.readease.model.News
 
-class NewsViewModel : ViewModel() {
-
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is dashboard Fragment"
-    }
-    val text: LiveData<String> = _text
+class NewsViewModel(private val extras: Bundle?) : ViewModel() {
+    val news = extras?.getParcelable<News>(NewsActivity.NEWS_KEY)
 }

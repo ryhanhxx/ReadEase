@@ -15,6 +15,7 @@ import com.ch.readease.model.Author
 import com.ch.readease.model.News
 import com.ch.readease.presentation.home.adapter.AuthorAdapter
 import com.ch.readease.presentation.home.adapter.NewsAdapter
+import com.ch.readease.presentation.news.NewsActivity
 
 class HomeFragment : Fragment() {
 
@@ -28,9 +29,14 @@ class HomeFragment : Fragment() {
 
     private val adapterNews: NewsAdapter by lazy {
         NewsAdapter { news: News ->
-
+            navigateToDetailFragment(news)
         }
     }
+
+    private fun navigateToDetailFragment(news: News) {
+        NewsActivity.startActivity(requireContext(), news)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
