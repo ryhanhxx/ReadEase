@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.google.gms.google.services)
     id("kotlin-parcelize")
     id("com.google.devtools.ksp")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -68,13 +69,28 @@ dependencies {
     //material
     implementation (libs.material.v110alpha05)
 
-    //ksp
-    ksp("androidx.room:room-compiler:2.6.1")
+    //room
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+
+    // retrofit & okhttp
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.okhttp)
 
     //coil
-    implementation("io.coil-kt:coil:2.4.0")
+    implementation(libs.coil)
 
     //rv
-    implementation("androidx.recyclerview:recyclerview:1.3.1")
+    implementation(libs.androidx.recyclerview)
+
+    //ktx lifecycle
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx.v262)
+    implementation(libs.androidx.lifecycle.livedata.ktx.v262)
+
+    // Glide
+    implementation (libs.glide)
+    ksp (libs.compiler)
 
 }

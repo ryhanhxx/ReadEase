@@ -15,5 +15,9 @@
         android:id="@+id/navigation_news"
         android:name="com.ch.readease.presentation.news.NewsFragment"
         android:label="@string/title_news"
-        tools:layout="@layout/fragment_news" />
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_navigation_news_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
 </navigation>

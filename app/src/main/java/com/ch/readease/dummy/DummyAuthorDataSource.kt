@@ -11,24 +11,20 @@ class DummyAuthorDataSourceImpl() : DummyAuthorDataSource {
     override fun getAuthorData(): List<Author> {
         return mutableListOf(
             Author(
-                name = "Author 1",
-                imgUrl = "https://raw.githubusercontent.com/ryhanhxx/ReadEase/master/app/src/main/res/drawable/img_author_1.png"
+                name = "Bitcoin",
+                imgUrl = "https://raw.githubusercontent.com/ryhanhxx/ReadEase_Asset/main/ic_bitcoin.png"
             ),
             Author(
-                name = "Author 2",
-                imgUrl = "https://raw.githubusercontent.com/ryhanhxx/ReadEase/master/app/src/main/res/drawable/img_author_2.png"
+                name = "Tesla",
+                imgUrl = "https://raw.githubusercontent.com/ryhanhxx/ReadEase_Asset/main/ic_tesla.png"
             ),
             Author(
-                name = "Author 3",
-                imgUrl = "https://raw.githubusercontent.com/ryhanhxx/ReadEase/master/app/src/main/res/drawable/img_author_3.png"
+                name = "Apple",
+                imgUrl = "https://raw.githubusercontent.com/ryhanhxx/ReadEase_Asset/main/ic_apple.png"
             ),
             Author(
-                name = "Author 4",
-                imgUrl = "https://raw.githubusercontent.com/ryhanhxx/ReadEase/master/app/src/main/res/drawable/img_author_4.png"
-            ),
-            Author(
-                name = "Author 5",
-                imgUrl = "https://raw.githubusercontent.com/ryhanhxx/ReadEase/master/app/src/main/res/drawable/img_author_4.png"
+                name = "Wall Street Journal",
+                imgUrl = "https://raw.githubusercontent.com/ryhanhxx/ReadEase_Asset/main/ic_wsj.png"
             ),
         )
     }

@@ -12,7 +12,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.ch.readease.R
 import com.ch.readease.databinding.ActivityOnboardingBinding
 import com.ch.readease.dummy.DummyOnboardingDataSourceImpl
-import com.ch.readease.presentation.login.LoginActivity
+import com.ch.readease.presentation.main.MainActivity
 import com.ch.readease.presentation.onboarding.adapter.OnboardingAdapter
 
 class OnboardingActivity : AppCompatActivity() {
@@ -96,13 +96,13 @@ class OnboardingActivity : AppCompatActivity() {
             if (binding.vpSlide.currentItem + 1 < OnboardingAdapter.itemCount) {
                 binding.vpSlide.currentItem += 1
             } else {
-                val intent = Intent(this, LoginActivity::class.java)
+                val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             }
         }
 
         binding.tvSkip.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }

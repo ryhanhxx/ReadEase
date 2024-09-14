@@ -27,7 +27,6 @@
                 android:queryHint="Find news"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:id="@+id/ll_categories"
                 android:layout_width="match_parent"
@@ -102,10 +101,10 @@
 
                     <TextView
                         style="@style/TextAppearance.Material3.TitleMedium"
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_bold"
-                        android:text="Explore Author"
+                        android:text="Media"
                         android:textSize="18sp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -134,22 +133,16 @@
                 android:orientation="vertical"
                 app:layout_constraintTop_toBottomOf="@id/ll_author">
 
-                <androidx.appcompat.widget.LinearLayoutCompat
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="For you" />
-
-                    <com.google.android.material.chip.Chip
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="8dp"
-                        android:text="Most Popular" />
-
-                </androidx.appcompat.widget.LinearLayoutCompat>
+                <TextView
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Discover"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_news_1"
