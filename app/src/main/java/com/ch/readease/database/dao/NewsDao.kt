@@ -1,4 +1,7 @@
 package com.ch.readease.database.dao
 
-class NewsDao {
+import androidx.room.Dao
+
+@Dao
+interface NewsDao {
 }
