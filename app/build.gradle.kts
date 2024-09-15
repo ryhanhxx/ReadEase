@@ -40,23 +40,6 @@ android {
         viewBinding = true
         buildConfig = true
     }
-    flavorDimensions += "env"
-    productFlavors {
-        create("production") {
-            buildConfigField(
-                "String",
-                "BASE_URL",
-                "\"https://newsapi.org/v2/everything?q=keyword&apiKey=a99bb2c640344c7c80844e163d024722\""
-            )
-        }
-        create("integration") {
-            buildConfigField(
-                "String",
-                "BASE_URL",
-                "\"https://newsapi.org/v2/everything?q=keyword&apiKey=a99bb2c640344c7c80844e163d024722\""
-            )
-        }
-    }
 }
 
 dependencies {
@@ -90,6 +73,7 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
     implementation(libs.okhttp)
+    implementation (libs.logging.interceptor)
 
     //coil
     implementation(libs.coil)
