@@ -12,7 +12,10 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorOnSecondary</item>
         <!-- Customize your theme here. -->
-
+        <item name="colorError">@color/app_color_error</item>
+        <item name="colorOnError">@color/app_color_on_error</item>
+        <item name="colorErrorContainer">@color/app_color_error_container</item>
+        <item name="colorOnErrorContainer">@color/app_color_on_error_container</item>
     </style>
 
     <style name="Theme.ReadEase" parent="Base.Theme.ReadEase" />

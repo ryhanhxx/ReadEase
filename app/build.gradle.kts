@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.google.gms.google.services)
     id("kotlin-parcelize")
     id("com.google.devtools.ksp")
     id("androidx.navigation.safeargs.kotlin")
@@ -39,11 +38,28 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
+    }
+    flavorDimensions += "env"
+    productFlavors {
+        create("production") {
+            buildConfigField(
+                "String",
+                "BASE_URL",
+                "\"https://newsapi.org/v2/everything?q=keyword&apiKey=a99bb2c640344c7c80844e163d024722\""
+            )
+        }
+        create("integration") {
+            buildConfigField(
+                "String",
+                "BASE_URL",
+                "\"https://newsapi.org/v2/everything?q=keyword&apiKey=a99bb2c640344c7c80844e163d024722\""
+            )
+        }
     }
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -62,9 +78,6 @@ dependencies {
     //coroutine
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
-
-    //firebase
-    implementation(libs.firebase.auth)
 
     //material
     implementation (libs.material.v110alpha05)

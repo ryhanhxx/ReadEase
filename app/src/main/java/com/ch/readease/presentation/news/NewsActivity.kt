@@ -27,11 +27,12 @@ class NewsActivity : AppCompatActivity() {
         showNewsData(viewModel.news)
     }
 
-    private fun navigateBack(){
+    private fun navigateBack() {
         binding.ivBack.setOnClickListener {
             finish()
         }
     }
+
     private fun showNewsData(news: News?) {
         news?.apply {
             binding.ivImg.load(this.imgUrl) {

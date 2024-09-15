@@ -22,7 +22,7 @@
             android:id="@+id/tv_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_bold"
+            android:textStyle="bold"
             tools:text="Title"
             android:textColor="@color/cPrimary"
             android:textSize="28sp" />
@@ -31,7 +31,6 @@
             android:id="@+id/tv_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto"
             tools:text="Desc"
             android:textSize="14sp" />
 
